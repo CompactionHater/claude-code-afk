@@ -1,0 +1,11 @@
+{
+  "name": "claude-code-afk",
+  "owner": { "name": "CompactionHater" },
+  "plugins": [
+    {
+      "name": "afk",
+      "source": "./",
+      "description": "Type /afk when you step away: Claude logs instead of asking, and briefs you when you are back."
+    }
+  ]
+}

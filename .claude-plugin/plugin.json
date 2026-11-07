@@ -1,0 +1,5 @@
+{
+  "name": "afk",
+  "version": "0.1.0",
+  "description": "Type /afk when you step away: Claude stops asking and waiting, logs questions, tasks and decisions, and briefs you when you are back."
+}
