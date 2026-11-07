@@ -17,6 +17,7 @@ const rules = (log: string) => `The user has gone AFK and cannot answer until th
   ## Decisions - what you chose and why
   ## Improvements - things worth fixing or doing next that you noticed
 - Write each line for someone who saw none of this session: name the exact file, command, PR or result it is about; never "the fix", "this approach" or "the experiment" without saying which; plain words before identifiers; say what is true now, not the story of getting there.
+- Log only real items: a question is something you would really have asked the user. Leave out a heading that has nothing under it, and create no log at all if there is nothing to report.
 - When nothing is left that you can do, end the turn.`
 
 // After cc-plugin-you-should-know's observer: a second look the main agent cannot give its own work.
@@ -37,7 +38,8 @@ async function comeBack($: EngineInterface) {
   return { since: a.since, log: a.log, brief }
 }
 
-const WAKE = 'I am going AFK now. Carry on under the AFK rules: if you were waiting on me, take the safest choice, log it, and continue.'
+const WAKE =
+  'I am going AFK now. Carry on under the AFK rules: if you were waiting on me, take the safest choice, log it, and continue. If no work is in progress, just end the turn without logging anything.'
 
 const REASK =
   'Ask the user every item under ## Questions again with AskUserQuestion, the choice you took as the first option marked (Recommended), and act on any answer that differs from your choice.'
