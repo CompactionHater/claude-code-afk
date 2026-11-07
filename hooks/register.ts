@@ -54,7 +54,7 @@ async function goAway($: EngineInterface) {
   const now = new Date()
   const since = now.toTimeString().slice(0, 5)
   away = { since, log: `${dir}/afk/${await $.session.id()}-${now.toISOString().replace(/[:.]/g, '-')}.md` }
-  $.ui.status(`AFK since ${since}: Claude logs instead of asking. Type afk when back`)
+  $.ui.status(`AFK since ${since}: Claude logs instead of asking. Your next message ends it`)
   return away.log
 }
 

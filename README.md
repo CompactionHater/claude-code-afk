@@ -17,8 +17,8 @@ Tested on Claude Code 2.1.319. The plugin is a hooks module (`hooks/register.ts`
 |---|---|
 | `afk` or `brb` as a message | AFK turns on. This works while Claude is working: the message reaches the running turn at its next step. |
 | `/afk` or `/brb` | The same, but the engine runs slash commands only between turns, so a `/afk` typed mid-turn waits for the turn to end. |
-| `afk` or `/afk` again | You are back: you get the brief. |
-| Any other message | You are back: Claude opens its reply with the brief. |
+| Your next message, whatever it says | You are back: Claude opens its reply with the brief. |
+| `/afk` again | You are back: the brief is shown as it is, and Claude replies only to ask its logged questions again. |
 
 While AFK is on:
 
